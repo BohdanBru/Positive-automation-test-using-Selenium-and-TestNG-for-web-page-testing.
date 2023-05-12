@@ -13,9 +13,13 @@ public class OLXPage extends BasePage {
         super(driver);
     }
 
-    By locat = By.xpath("/html/body/div[1]/div[2]/div[2]/form/div[3]/div[1]/div/div[9]/div/div/div[1]");
-    By option2Rooms = By.xpath("/html/body/div[1]/div[2]/div[2]/form/div[3]/div[1]/div/div[9]/div/div/div[2]/div/div[3]/label/input");
-    By accept = By.xpath("/html/body/div[2]/div[2]/div/div[1]/div/div[2]/div/button[1]");
+    By locat = By.xpath("//p[text()='Liczba pokoi']/../div/div");
+    //"/html/body/div[1]/div[2]/div[2]/form/div[3]/div[1]/div/div[9]/div/div/div[1]"
+
+    By option2Rooms = By.xpath("//p[text()='2 pokoje']/../input");
+    // "/html/body/div[1]/div[2]/div[2]/form/div[3]/div[1]/div/div[9]/div/div/div[2]/div/div[3]/label/input"
+    By accept = By.xpath("//button[text()='Akceptuję']");
+    //"/html/body/div[2]/div[2]/div/div[1]/div/div[2]/div/button[1]"
 
     public OLXPage enterCountRooms() {
         driver.get("https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/");
