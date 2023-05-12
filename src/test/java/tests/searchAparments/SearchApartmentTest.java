@@ -12,8 +12,8 @@ public class SearchApartmentTest extends BaseTest {
     public void checkRedirectToListning() {
         basePage.open("https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/");
         //switchWindow();
-        otoDomPage.enterCountRooms();
-        otoDomListningPage.checkCountCards();
+        OLXPage.enterCountRooms();
+        OLXListeningPage.checkCountCards();
 
 
     }
