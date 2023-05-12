@@ -3,7 +3,6 @@ package tests.base;
 import common.CommonAction;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterSuite;
 import page.base.BasePage;
 import page.listning.OLXListeningPage;
 import page.otoDom.OLXPage;
@@ -17,8 +16,8 @@ import java.time.Duration;
 public class BaseTest {
     protected WebDriver driver = CommonAction.createDriver();
     protected BasePage basePage = new BasePage(driver);
-    protected OLXPage otoDomPage = new OLXPage(driver);
-    protected OLXListeningPage otoDomListningPage = new OLXListeningPage(driver);
+    protected OLXPage OLXPage = new OLXPage(driver);
+    protected OLXListeningPage OLXListeningPage = new OLXListeningPage(driver);
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
     /*protected void switchWindow(){
@@ -40,8 +39,8 @@ public class BaseTest {
 
 
     }*/
-    @AfterSuite(alwaysRun = true)
+    /*@AfterSuite(alwaysRun = true)
     public void windowQuit() {
         driver.quit();
-    }
+    }*/
 }
